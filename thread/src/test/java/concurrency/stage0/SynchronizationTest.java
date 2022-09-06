@@ -27,6 +27,7 @@ class SynchronizationTest {
      */
     @Test
     void testSynchronized() throws InterruptedException {
+        // Executors는 ExecutorService 객체를 생성하며, 다음 메소드를 제공하여 쓰레드 풀을 개수 및 종류를 정할 수 있다.
         var executorService = Executors.newFixedThreadPool(3);
         var synchronizedMethods = new SynchronizedMethods();
 

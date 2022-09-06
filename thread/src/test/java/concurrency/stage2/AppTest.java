@@ -42,7 +42,7 @@ class AppTest {
         assertThat(count.intValue()).isEqualTo(2);
     }
 
-    private static void incrementIfOk(final HttpResponse<String> response) {
+    private synchronized static void incrementIfOk(final HttpResponse<String> response) {
         if (response.statusCode() == 200) {
             count.incrementAndGet();
         }
